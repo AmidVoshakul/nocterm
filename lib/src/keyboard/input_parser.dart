@@ -159,7 +159,7 @@ class InputParser {
     // For other terminals (xfce4-terminal/VTE, etc.) raw 0x0A from Ctrl+J
     // must NOT be swallowed as Enter, otherwise TextField submits instead of
     // inserting a newline. We therefore map non-Warp 0x0A to Ctrl+J here,
-    // matching OpenCode's LF→Ctrl+J parity and the existing TextField branch
+    // matching the existing TextField branch
     // `event.matches(LogicalKey.keyJ, ctrl: true)`.
     // When kitty keyboard protocol is active, Ctrl+J arrives as a kitty
     // CSI sequence (\x1b[106;5u), not as raw 0x0A, so this doesn't
